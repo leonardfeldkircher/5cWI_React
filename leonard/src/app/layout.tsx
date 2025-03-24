@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white">
+      <body className={`bg-white ${geistSans.variable} ${geistMono.variable}`}>
         <Menu />
         {children}
       </body>
