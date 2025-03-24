@@ -20,11 +20,11 @@ export default function CarList({ cars }: Props) {
                         className="w-full h-64 object-cover rounded-lg mb-4"
                     />
                     <h2 className="text-xl font-bold">{car.name}</h2>
-                    <p className="text-gray-600">{car.type}</p>
-                    <p className="text-gray-500">Farbe: {car.color}</p>
+                    <p className="text-black">{car.type}</p>
+                    <p className="text-black">Farbe: {car.color}</p>
                     <div className="mt-2">
-                        <p className="text-sm">Motor: {car.motor.hp} PS</p>
-                        <p className="text-sm">Seriennummer: {car.motor.serialNumber}</p>
+                        <p className="text-sm text-black">Horepower: {car.motor.hp} PS</p>
+                        <p className="text-sm text-black">Seriennummer: {car.motor.serialNumber}</p>
                     </div>
                 </div>
             ))}
