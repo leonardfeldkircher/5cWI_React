@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Menu from "./componets/menu";
-
 export default function Home() {
   return (
     <div>

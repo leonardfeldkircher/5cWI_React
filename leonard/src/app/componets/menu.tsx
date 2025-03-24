@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-type Props = {}
+type Props = Record<string, never>
 
 export default function Menu({}: Props) {
   return (

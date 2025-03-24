@@ -1,11 +1,10 @@
-export interface Motor {
-    serialNumber: number;
-    hp: number;
-}
-
-export interface Car {
+export type Car = {
     name: string;
     type: string;
     color: string;
-    motor: Motor;
+    image: string; // Neues Bildfeld
+    motor: {
+        serialNumber: number;
+        hp: number;
+    }
 }

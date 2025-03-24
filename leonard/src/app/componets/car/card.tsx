@@ -1,24 +1,29 @@
 "use client";
-import React, { useState } from 'react'
-import { Car } from '../../../../lib/types';
 
-type Props = { car: Car }
+import { useState } from 'react'
+import type { Props } from './types'
 
 export default function Card({ car }: Props) {
     const [isActive, setIsActive] = useState(false);
+    
     return (
-        <div className={`p-6 rounded-lg shadow-md hover:shadow-xl hover:cursor-pointer transition duration-300
-                ${isActive ? 'bg-gray-900 text-white border-2 border-amber-500' : 'bg-blue-900 text-white border-2 border-white'}`}
-            onClick={() => {
-                setIsActive(!isActive);
-        }}>
-        
-            <h2 className='font-bold text-2xl'>{car.name}</h2>
-            <h2 className='text-xl'>{car.type}</h2>
-            <h2>Color: {car.color}</h2>
-            <h2>Serial Number: {car.motor.serialNumber}</h2>
-            <h2>Horsepower: {car.motor.hp}</h2>
-            {isActive ? "active" : "inactive"}
+        <div 
+            style={{
+                padding: '1.5rem',
+                borderRadius: '0.5rem',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                cursor: 'pointer',
+                backgroundColor: isActive ? 'rgba(0, 0, 0, 0.1)' : 'white',
+                color: 'black',
+                transition: 'all 0.3s ease'
+            }}
+            onClick={() => setIsActive(!isActive)}
+        >
+            <h2 style={{ fontWeight: 'bold', fontSize: '1.5rem', color: 'black' }}>{car.name}</h2>
+            <h2 style={{ fontSize: '1.25rem', color: 'black' }}>{car.type}</h2>
+            <h2 style={{ color: 'black' }}>Color: {car.color}</h2>
+            <h2 style={{ color: 'black' }}>Serial Number: {car.motor.serialNumber}</h2>
+            <h2 style={{ color: 'black' }}>Horsepower: {car.motor.hp}</h2>
         </div>
     )
 }
