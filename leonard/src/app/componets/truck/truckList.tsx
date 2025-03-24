@@ -1,6 +1,16 @@
 import React from 'react'
 import Image from 'next/image';
-import { Truck } from '../../../../lib/types';
+
+type Truck = {
+    name: string;
+    type: string;
+    color: string;
+    image: string;
+    motor: {
+        hp: number;
+        serialNumber: string;
+    };
+}
 
 type Props = {
     trucks: Truck[];
