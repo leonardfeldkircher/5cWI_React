@@ -1,7 +1,11 @@
-import React from 'react'
+'use client';
 
-export default function Trucks() {
+import Game from '../game/game';
+
+export default function TrucksPage() {
   return (
-    <div>trucks</div>
+    <div className="min-h-screen p-6">
+      <Game />
+    </div>
   )
 }
