@@ -1,13 +1,24 @@
 "use client";
-
 import { useState } from 'react'
-import type { Props } from './types'
+interface Car {
+    name: string;
+    type: string;
+    color: string;
+    motor: {
+        serialNumber: string;
+        hp: number;
+    }
+}
 
-export default function Card({ car }: Props) {
+interface CardProps {
+    car: Car;
+}
+
+export default function Card({ car }: CardProps) {
     const [isActive, setIsActive] = useState(false);
     
     return (
-        <div 
+        <div
             style={{
                 padding: '1.5rem',
                 borderRadius: '0.5rem',
