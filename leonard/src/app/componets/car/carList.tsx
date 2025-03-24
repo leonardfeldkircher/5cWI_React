@@ -19,7 +19,7 @@ export default function CarList({ cars }: Props) {
                         height={300}
                         className="w-full h-64 object-cover rounded-lg mb-4"
                     />
-                    <h2 className="text-xl font-bold">{car.name}</h2>
+                    <h2 className="text-xl font-bold text-black">{car.name}</h2>
                     <p className="text-black">{car.type}</p>
                     <p className="text-black">Farbe: {car.color}</p>
                     <div className="mt-2">
